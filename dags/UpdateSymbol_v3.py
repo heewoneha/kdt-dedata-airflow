@@ -1,3 +1,10 @@
+"""
+Airflow Day4 Homework
+
+UpdateSymbol_v2의 Incremental Update 방식 수정해보기
+(ROW_NUMBER 방식을 사용해서 Primary key가 동일한 레코드들을 처리하기)
+"""
+
 from airflow import DAG
 from airflow.decorators import task
 from airflow.providers.postgres.hooks.postgres import PostgresHook
