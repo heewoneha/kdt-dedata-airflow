@@ -76,7 +76,7 @@ def load(schema, table, records):
 
 with DAG(
     dag_id = 'UpdateSymbol_v3',
-    start_date = datetime(2023, 5, 30),
+    start_date = datetime(2023, 6, 7), # 2023-06-08에 실행
     catchup = False,
     tags = ['API'],
     schedule = '0 10 * * *'
