@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: jhjmo0719h
+    schema: raw_data
+    tables:
+      - name: metadata
+        identifier: user_metadata
+      - name: event
+        identifier: user_event
+        loaded_at_field: datestamp
+        freshness:
+          warn_after: { count: 1, period: hour }
+          error_after: { count: 24, period: hour }
+      - name: variant
+        identifier: user_variant
